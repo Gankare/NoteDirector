@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animation blinking;
+    private float timeBetweenBlinks = 5;
+    private float timer = 0;
+
     void Start()
     {
-        
+        blinking = gameObject.GetComponent<Animation>();
+        RandomTimeRange();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        timer += Time.deltaTime;
+        if (timer > timeBetweenBlinks )
+        {
+            blinking.Play();
+            timer = 0;
+            RandomTimeRange();
+        }
+    }
+    private void RandomTimeRange()
+    {
+        timeBetweenBlinks = Random.Range(5, 12);
     }
 }
+
