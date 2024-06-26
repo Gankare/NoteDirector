@@ -10,7 +10,7 @@ public class MoveStraw : MonoBehaviour
     private int currentRegionIndex = -1; // No region selected initially
     private Vector3 targetPosition;
     public InputActionAsset actions;
-
+    private StrawSwirl swirlScript;
     private InputAction aButtonAction;
     private InputAction dButtonAction;
     private InputAction sButtonAction;
@@ -22,6 +22,7 @@ public class MoveStraw : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
+        swirlScript = GetComponent<StrawSwirl>();
         // Check if actions are assigned
         if (actions == null)
         {
@@ -97,7 +98,9 @@ public class MoveStraw : MonoBehaviour
     {
         if (timeBetweenDirections > cd && currentRegionIndex != 0)
         {
+            swirlScript.StopSucking(ctx);
             timeBetweenDirections = 0;
+            swirlScript.ChangeDirection(Vector2.left);
             SetRegion(0);
         }
     }
@@ -106,7 +109,9 @@ public class MoveStraw : MonoBehaviour
     {
         if (timeBetweenDirections > cd && currentRegionIndex != 1) 
         {
+            swirlScript.StopSucking(ctx);
             timeBetweenDirections = 0;
+            swirlScript.ChangeDirection(Vector2.right);
             SetRegion(1);
         }
     }
@@ -115,7 +120,9 @@ public class MoveStraw : MonoBehaviour
     {
         if (timeBetweenDirections > cd && currentRegionIndex != 2)
         {
+            swirlScript.StopSucking(ctx);
             timeBetweenDirections = 0;
+            swirlScript.ChangeDirection(Vector2.down);
             SetRegion(2);
         }
     }
@@ -124,7 +131,9 @@ public class MoveStraw : MonoBehaviour
     {
         if (timeBetweenDirections > cd && currentRegionIndex != 3)
         {
+            swirlScript.StopSucking(ctx);
             timeBetweenDirections = 0;
+            swirlScript.ChangeDirection(Vector2.up);
             SetRegion(3);
         }
     }
