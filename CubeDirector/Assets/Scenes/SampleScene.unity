@@ -1141,17 +1141,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5821141319907010035, guid: be555217aa6a4704aa9ef1a43b8391f9, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821141319907010035, guid: be555217aa6a4704aa9ef1a43b8391f9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821141319907010035, guid: be555217aa6a4704aa9ef1a43b8391f9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821141319907010035, guid: be555217aa6a4704aa9ef1a43b8391f9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8049228976097585983, guid: be555217aa6a4704aa9ef1a43b8391f9, type: 3}
       propertyPath: detector
       value: 
       objectReference: {fileID: 1560565349}
     - target: {fileID: 8049228976097585983, guid: be555217aa6a4704aa9ef1a43b8391f9, type: 3}
-      propertyPath: maxScale
-      value: 255
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049228976097585983, guid: be555217aa6a4704aa9ef1a43b8391f9, type: 3}
-      propertyPath: minScale
-      value: 0
+      propertyPath: loudnessSencabillity
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,12 +14,12 @@ public class MaterialFromAudioScorce : MonoBehaviour
     public float thresshold = 0.1f;
 
     public float currentLoundness;
-    private Renderer rend;
+    public SpriteRenderer rend;
     private void Start()
     {
         SetAlpha(0);
         source = GetComponent<AudioSource>();
-        rend  = GetComponent<Renderer>();
+        rend  = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -34,9 +34,9 @@ public class MaterialFromAudioScorce : MonoBehaviour
     {
         if (rend != null)
         {
-            Color color = rend.material.color;
+            Color color = rend.color;
             color.a = alphaValue;
-            rend.material.color = color;
+            rend.color = color;
         }
     }
 }
